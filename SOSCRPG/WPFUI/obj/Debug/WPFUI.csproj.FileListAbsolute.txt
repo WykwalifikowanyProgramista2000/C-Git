@@ -1,7 +1,6 @@
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\bin\Debug\WPFUI.exe.config
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\bin\Debug\WPFUI.exe
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\bin\Debug\WPFUI.pdb
-C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.csprojAssemblyReference.cache
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\MainWindow.g.cs
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\App.g.cs
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI_MarkupCompile.cache
@@ -13,3 +12,7 @@ C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.csproj.GenerateReso
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.csproj.CoreCompileInputs.cache
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.exe
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.pdb
+C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\bin\Debug\ClassLibrary1.dll
+C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\bin\Debug\ClassLibrary1.pdb
+C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.csprojAssemblyReference.cache
+C:\Users\Wojti\Documents\C#Git\SOSCRPG\WPFUI\obj\Debug\WPFUI.csproj.CopyComplete
