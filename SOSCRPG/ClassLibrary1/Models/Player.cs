@@ -16,6 +16,8 @@ namespace Engine.Models
         private int _experiencePoints;
         private int _level;
         private int _gold;
+
+        public string PortraitName { get; set; }
         public string Name
         {
             get { return _name; }
