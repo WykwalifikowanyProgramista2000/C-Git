@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Engine.Models;
-
+using Engine.Factories;
 namespace Engine.ViewModels
 {
     public class GameSession
     {
         public Player CurrentPlayer { get; set; }
         public Location CurrentLocation { get; set; }
+        public World CurrentWorld { get; set; }
 
         public GameSession()
         {
@@ -22,13 +23,11 @@ namespace Engine.ViewModels
             CurrentPlayer.HitPoints = 100;
             CurrentPlayer.Level = 1337;
             CurrentPlayer.PortraitName = "/Engine;component/Images/Portraits/Portrait1.png";
+            
+            WorldFactorie factorie = new WorldFactorie();
+            CurrentWorld = factorie.CreateWorld();
 
-            CurrentLocation = new Location();
-            CurrentLocation.Name = "Home";
-            CurrentLocation.Description = "Your home is, where your heart belongs";
-            CurrentLocation.ImageName = "/Engine;component/Images/Locations/Home.png";
-            CurrentLocation.XCoordinate = 0;
-            CurrentLocation.YCoordinate = -1;
+            CurrentLocation = CurrentWorld.LocationAt(0, 0);
         }
 
     }
