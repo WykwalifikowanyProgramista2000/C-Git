@@ -7,9 +7,9 @@ using Engine.Models;
 
 namespace Engine.Factories
 {
-    internal class WorldFactorie
+    internal static class WorldFactorie
     {
-        internal World CreateWorld()
+        internal static World CreateWorld()
         {
             World newWorld = new World();
 
@@ -46,6 +46,8 @@ namespace Engine.Factories
             newWorld.AddLocation(0, 1, "Herbalists Hut",
                 "420 blaze it",
                 "/Engine;component/Images/Locations/HerbalistsHut.png");
+
+            newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestByID(1));
 
             newWorld.AddLocation(0, 2, "Herbalists Garden",
                 "The quality :<",

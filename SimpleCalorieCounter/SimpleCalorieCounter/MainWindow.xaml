@@ -1,0 +1,57 @@
+﻿<Window x:Class="SimpleCalorieCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleCalorieCounter"
+        mc:Ignorable="d"
+        FontSize="13pt"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0"
+              Background="Olive">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding NewProduct.Name}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Kcal:"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding NewProduct.Macro.KcalValue}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Protein:"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding NewProduct.Macro.ProteinsValue}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Carbohydrates:"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding NewProduct.Macro.CarbohydratesValue}"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Fats:"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding NewProduct.Macro.FatsValue}"/>
+            <TextBox Grid.Row="5" Grid.Column="0" 
+                     Grid.ColumnSpan="2" 
+                     Margin="6"
+                     Name="txtbx"/>
+            <Button Grid.Row="6" Grid.Column="0"
+                    Grid.ColumnSpan="2" 
+                    Height="25" Width="100" 
+                    Content="OK"
+                    Click="ButtonClick"/>
+
+        </Grid>
+    </Grid>
+</Window>
