@@ -21,21 +21,29 @@ namespace Engine.Models
             set
             {
                 _hitPoints = value;
-                OnPropertyChanged(nameof(_hitPoints));
+                OnPropertyChanged(nameof(HitPoints));
             }
         }
+
+        public int MinimumDamage { get; set; }
+        public int MaximumDamage { get; set; }
 
         public int RewardExperiencePoints { get; private set; }
         public int RewardGold { get; private set; }
 
         public ObservableCollection<ItemQuantity> Inventory { get; set; }
 
-        public Monster(string name, string imageName, int maxHitpoints, int hitPoints, int rewardExperiencePoints, int rewardGold)                        
+        public Monster(string name, string imageName,
+                        int maxHitpoints, int hitPoints,
+                        int minimumDamage, int maximumDamage,
+                        int rewardExperiencePoints, int rewardGold)                        
         {
             Name = name;
             ImageName = string.Format("/Engine;component/Images/Monsters/{0}", imageName);
             MaxHitpoints = maxHitpoints;
             HitPoints = hitPoints;
+            MinimumDamage = minimumDamage;
+            MaximumDamage = maximumDamage;
             RewardExperiencePoints = rewardExperiencePoints;
             RewardGold = rewardGold;
 

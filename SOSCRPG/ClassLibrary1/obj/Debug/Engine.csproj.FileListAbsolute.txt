@@ -5,3 +5,10 @@ C:\Users\Wojti\Documents\C#Git\SOSCRPG\ClassLibrary1\bin\Debug\Engine.pdb
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\ClassLibrary1\obj\Debug\Engine.g.resources
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\ClassLibrary1\obj\Debug\Engine.dll
 C:\Users\Wojti\Documents\C#Git\SOSCRPG\ClassLibrary1\obj\Debug\Engine.pdb
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\bin\Debug\Engine.dll
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\bin\Debug\Engine.pdb
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\obj\Debug\Engine.csprojAssemblyReference.cache
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\obj\Debug\Engine.g.resources
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\obj\Debug\Engine.dll
+C:\Users\wojte\Documents\CisGit\SOSCRPG\ClassLibrary1\obj\Debug\Engine.pdb
