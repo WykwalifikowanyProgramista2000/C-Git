@@ -23,12 +23,10 @@ namespace WPFUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GameSession _gameSession;
+        private readonly GameSession _gameSession = new GameSession();
         public MainWindow()
         {
-            InitializeComponent();
-
-            _gameSession = new GameSession();
+            InitializeComponent();            
 
             _gameSession.OnMessageRaised += OnGameMessageRaised;
 
@@ -58,6 +56,14 @@ namespace WPFUI
         private void OnClick_AttackMonster(object sender, RoutedEventArgs e)
         {
             _gameSession.AttackCurrentMonster();
+        }
+
+        private void OnClick_DisplayTradeScreen(object sender, RoutedEventArgs e)
+        {
+            TradeScreen tradeScreen = new TradeScreen();
+            tradeScreen.Owner = this;
+            tradeScreen.DataContext = _gameSession;
+            tradeScreen.ShowDialog();
         }
 
         private void OnGameMessageRaised(object sender, GameMessageEventArgs e)
