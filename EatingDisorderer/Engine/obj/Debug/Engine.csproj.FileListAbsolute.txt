@@ -1,0 +1,6 @@
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\bin\Debug\Engine.dll
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\bin\Debug\Engine.pdb
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\obj\Debug\Engine.dll
+C:\Users\wojte\source\repos\EatingDisorderer\Engine\obj\Debug\Engine.pdb
