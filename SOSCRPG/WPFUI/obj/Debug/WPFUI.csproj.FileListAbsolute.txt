@@ -34,3 +34,5 @@ C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\WPFUI.csproj.CoreCompile
 C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\WPFUI.csproj.CopyComplete
 C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\WPFUI.exe
 C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\WPFUI.pdb
+C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\TradeScreen.baml
+C:\Users\wojte\Documents\CisGit\SOSCRPG\WPFUI\obj\Debug\TradeScreen.g.cs

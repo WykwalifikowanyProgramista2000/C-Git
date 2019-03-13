@@ -18,7 +18,7 @@ namespace Engine.Models
             buffLocation.YCoordinate = yCoordinate;
             buffLocation.Name = name;
             buffLocation.Description = description;
-            buffLocation.ImageName = imageName;
+            buffLocation.ImageName = $"/Engine;component/Images/Locations/{imageName}";
 
             _locations.Add(buffLocation);
         }
