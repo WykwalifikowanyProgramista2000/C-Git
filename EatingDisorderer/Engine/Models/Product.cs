@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
-    class Product : BaseNotificationClass
+    public class Product : BaseNotificationClass
     {
         private string _name;
         private double _weight;      
@@ -52,7 +52,7 @@ namespace Engine.Models
             }
         }
 
-        Product(string name, double weight,
+        public Product(string name, double weight,
                 double proteins, double carbs,
                 double fats, double calories)
         {
@@ -62,6 +62,20 @@ namespace Engine.Models
             _calories = calories;
         }
 
+        public Product(string name, double weight,
+                        Macroelements macroelements,
+                        double calories)
+        {
+            _name = name;
+            _weight = weight;
+            _calories = calories;
+            _macroelements = macroelements;
+        }
+
+        public Product Clone()
+        {
+            return new Product(Name, Weight, Macroelements, Calories); 
+        }       
 
     }
 }

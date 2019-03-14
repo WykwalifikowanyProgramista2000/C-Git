@@ -1,0 +1,6 @@
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\bin\Debug\KowalewskiPartyCounter.dll
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\bin\Debug\KowalewskiPartyCounter.pdb
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\obj\Debug\MVVM.csprojAssemblyReference.cache
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\obj\Debug\MVVM.csproj.CoreCompileInputs.cache
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\obj\Debug\KowalewskiPartyCounter.dll
+C:\Users\Wojti\Documents\C#Git\KowalewskiPartyCounter\KowalewskiPartyCounter\obj\Debug\KowalewskiPartyCounter.pdb

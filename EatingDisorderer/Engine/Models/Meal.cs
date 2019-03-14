@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
-    abstract class Meal : BaseNotificationClass
+    public class Meal : BaseNotificationClass
     {
         private string _name;
         private double _weight;
@@ -51,26 +51,68 @@ namespace Engine.Models
                 OnPropertyChanged(nameof(Macroelements));
             }
         }
-        public ObservableCollection<Product> ProductsList { get; set; }
+        public ObservableCollection<Product> ProductList { get; set; }
 
+        public Meal(string name)
+        {
+            _name = name;
 
+            ProductList = new ObservableCollection<Product>();
+
+            CalculateCalories();
+            CalculateMacroelements();
+            CalculateWeight();
+        }
+
+        public Meal(string name, ObservableCollection<Product> productList)
+        {
+            _name = name;
+
+            ProductList = productList;
+
+            CalculateCalories();
+            CalculateMacroelements();
+            CalculateWeight();
+        }
 
         public void AddProduct(Product product)
         {
-            ProductsList.Add(product);
+            ProductList.Add(product);
 
-            OnPropertyChanged(nameof(ProductsList));
+            CalculateCalories();
+            CalculateMacroelements();
+            CalculateWeight();
+
+            OnPropertyChanged(nameof(ProductList));
         }
         public void RemoveProduct(Product product)
         {
-            ProductsList.Remove(product);
+            ProductList.Remove(product);
 
-            OnPropertyChanged(nameof(ProductsList));
+            CalculateCalories();
+            CalculateMacroelements();
+            CalculateWeight();
+
+            OnPropertyChanged(nameof(ProductList));
         }
-        public void CalculateCalories()
+        public Meal Clone()
         {
-            Calories = Macroelements.Proteins * 4 + Macroelements.Carbohydrates * 4
-                        + Macroelements.Fats * 9;
+            return new Meal(Name, ProductList);
+        }
+
+        private void CalculateCalories()
+        {
+            _calories = ProductList.Sum(i => i.Calories);
+        }
+        private void CalculateMacroelements()
+        {
+            _macroelements.Proteins = ProductList.Sum(product => product.Macroelements.Proteins);
+            _macroelements.Carbohydrates = ProductList.Sum(product => product.Macroelements.Carbohydrates);
+            _macroelements.Fats = ProductList.Sum(product => product.Macroelements.Fats);
+        }
+        private void CalculateWeight()
+        {
+            _weight = ProductList.Sum(product => product.Weight);
         }
     }
 }
