@@ -10,6 +10,7 @@ namespace MVVM.Model
     {
         private int _proszePanstwa;
         private int _mianowicie;
+        
 
         public int ProszePanstwa
         {
@@ -21,7 +22,6 @@ namespace MVVM.Model
                 OnPropertyChanged(nameof(ProszePanstwa));
             }
         }
-
         public int Mianowicie
         {
             get { return _mianowicie; }
@@ -31,9 +31,12 @@ namespace MVVM.Model
 
                 OnPropertyChanged(nameof(Mianowicie));
             }
+        }       
+
+        public ProszePanstwaMianowicie()
+        {
+            _proszePanstwa = 0;
+            _mianowicie = 0;
         }
-
-
-
     }
 }

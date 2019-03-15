@@ -6,13 +6,13 @@
         xmlns:viewModels="clr-namespace:MVVM.ViewModels;assembly=MVVM"
         xmlns:local="clr-namespace:WPFUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="200" Background="RosyBrown">
+        Title="MainWindow" Height="350" Width="260" Background="Black">
     <Grid>
         <!-- Main Grid definition-->
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -20,39 +20,122 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="1" Grid.Column="0"                   
-                   HorizontalAlignment="Center"
+        <!-- Clock -->
+        <Label Grid.Row="0" Grid.Column="0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="10"               
+               Foreground="White"
+               Content="Czas [s]:"/>
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   HorizontalAlignment="Right"
                    VerticalAlignment="Center"
-                   Height="Auto"
-                   Width="Auto"
-                   FontSize="14"
+                   Foreground="White"
+                   Text="{Binding MomentWykladu}"/>
+        
+        <!-- Save Data -->
+        <Button Grid.Row="0" Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10"
+                Height="30"
+                Width="80"
+                Background="LightSlateGray"
+                Foreground="White"
+                FontWeight="Bold"
+                Content="zapisz"/>
+
+        <!-- Data display -->
+        <Grid Grid.Row="1" Grid.Column="0"
+              Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0"
+                   FontWeight="Bold"
+                   Foreground="White"                   
+                   Content="ProszęPaństwa/min:"/>
+            <Label Grid.Row="2" Grid.Column="0"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Content="Suma:"/>
+            <TextBlock Grid.Row="3" Grid.Column="0"                   
+                   HorizontalAlignment="Center"                                      
+                   FontSize="20"                   
+                   Foreground="White"
                    Text="{Binding ProszePanstwaMianowicie.ProszePanstwa}"/>
+            <TextBlock Grid.Row="1" Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       FontSize="20"
+                       Foreground="White"
+                       Text="{Binding Wyklad.ProszePanstwaNaMin}"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="1"                   
+            <Label Grid.Row="0" Grid.Column="1"
+                   HorizontalAlignment="Center"                   
+                   FontWeight="Bold"
+                   Foreground="White"
+                   Content="Mianowicie/min"/>
+            <Label Grid.Row="2" Grid.Column="1"
+                   FontWeight="Bold"
+                   Foreground="White"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Height="Auto"
-                   Width="Auto"
-                   FontSize="14"
+                   Content="Suma:"/>
+            <TextBlock Grid.Row="3" Grid.Column="1"                   
+                   HorizontalAlignment="Center"                                      
+                   FontSize="20"
+                   Foreground="White"
                    Text="{Binding ProszePanstwaMianowicie.Mianowicie}"/>
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       FontSize="20"
+                       Foreground="White"
+                       Text="{Binding Wyklad.MianowicieNaMin}"/>
 
+        </Grid>
+
+               
+            <!-- Add / Subtract Buttons -->
         <Button Grid.Row="2" Grid.Column="0"
-                Margin="5"
+                Margin="5"                
+                Height="80"
+                FontSize="10"
+                FontWeight="Bold"
+                Background="LightSlateGray"
+                Foreground="White"                
                 Content="++ Proszę Państwa"
                 Click="OnClick_AddProszePanstwa"/>
-
         <Button Grid.Row="2" Grid.Column="1"
-                Margin="5"
-                Content="Mianowicie"
+                Margin="5"                
+                Height="80"
+                FontSize="10"
+                FontWeight="Bold"
+                Background="LightSlateGray"
+                Foreground="White"                
+                Content="++ Mianowicie"
                 Click="OnClick_AddMianowicie"/>
-
         <Button Grid.Row="3" Grid.Column="0"
-                Margin="2"
+                Margin="5"
+                FontSize="10"
+                FontWeight="Bold"
+                Background="SlateGray"
+                Foreground="White"                
                 Content="-- Prosze Państwa"
                 Click="OnClick_SubtractProszePanstwa"/>
-
         <Button Grid.Row="3" Grid.Column="1"
-                Margin="2"
+                Margin="5"
+                FontSize="10"
+                FontWeight="Bold"
+                Background="SlateGray"
+                Foreground="White"                
                 Content="-- Mianowicie"
                 Click="OnClick_SubtractMianowicie"/>
 

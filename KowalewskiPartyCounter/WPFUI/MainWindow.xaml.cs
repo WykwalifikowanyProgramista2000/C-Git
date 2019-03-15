@@ -26,7 +26,6 @@ namespace WPFUI
         public MainWindow()
         {
             InitializeComponent();
-
             DataContext = _mainViewModel;
         }
 
@@ -45,5 +44,6 @@ namespace WPFUI
 
         private void OnClick_SubtractMianowicie(object sender, RoutedEventArgs e)
             => _mainViewModel.SubtractMianowicie();
+        
     }
 }

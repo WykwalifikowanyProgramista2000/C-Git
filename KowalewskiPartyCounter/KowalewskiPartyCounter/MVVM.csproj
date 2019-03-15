@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseNotificationClass.cs" />
+    <Compile Include="Model\Wyklad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\ProszePanstwaMianowicie.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
