@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,21 +30,19 @@ namespace WPFUI
             DataContext = _mainViewModel;
         }
 
-        private void OnClick_AddProszePanstwa(object sender, RoutedEventArgs e)
-        {
-            _mainViewModel.AddProszePanstwa();
-        }
+        private void OnClick_AddProszePanstwa(object sender, RoutedEventArgs e)        
+            => _mainViewModel.AddProszePanstwa();        
 
         private void OnClick_AddMianowicie(object sender, RoutedEventArgs e)
-        {
-            _mainViewModel.AddMianowicie();
-        }
+            => _mainViewModel.AddMianowicie();        
 
         private void OnClick_SubtractProszePanstwa(object sender, RoutedEventArgs e)
             => _mainViewModel.SubtractProszePanstwa();
 
         private void OnClick_SubtractMianowicie(object sender, RoutedEventArgs e)
             => _mainViewModel.SubtractMianowicie();
-        
+
+        private void OnClick_SaveData(object sender, RoutedEventArgs e)
+            => _mainViewModel.SaveData("KPC_usersave.txt");                 
     }
 }

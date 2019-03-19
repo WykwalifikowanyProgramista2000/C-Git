@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:viewModels="clr-namespace:MVVM.ViewModels;assembly=MVVM"
+        xmlns:viewModels="clr-namespace:MVVM.ViewModels;assembly=MVVM"        
         xmlns:local="clr-namespace:WPFUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="260" Background="Black">
+        Title="Proszę Państwa, Mianowicie sygnały.." Height="350" Width="260" Background="Black">
     <Grid>
         <!-- Main Grid definition-->
         <Grid.RowDefinitions>
@@ -43,7 +43,8 @@
                 Background="LightSlateGray"
                 Foreground="White"
                 FontWeight="Bold"
-                Content="zapisz"/>
+                Content="zapisz"
+                Click="OnClick_SaveData"/>
 
         <!-- Data display -->
         <Grid Grid.Row="1" Grid.Column="0"

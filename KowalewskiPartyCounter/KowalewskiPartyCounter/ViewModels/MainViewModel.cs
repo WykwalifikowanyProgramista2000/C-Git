@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,19 +52,33 @@ namespace MVVM.ViewModels
             Wyklad = new Wyklad();
             ProszePanstwaMianowicie = new ProszePanstwaMianowicie();
             Wyklad.DlugoscWykladu = 1;
-            Wyklad.ProszePanstwaNaMin = 0;            
-            SetTimer();
+            Wyklad.ProszePanstwaNaMin = 0;   
+            
+            SetRefreshDataTimer();
+            SetAutoSaveTimer();
         }
               
-        private void SetTimer()
+        private void SetRefreshDataTimer()
         {
             Timer aTimer = new Timer(1000);
-            aTimer.Elapsed += OnTimedEvent;
+            aTimer.Elapsed += OnRefreshDataTimedEvent;
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
         }
 
-        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        private void SetAutoSaveTimer()
+        {
+            Timer aTimer = new Timer(60000);
+            aTimer.Elapsed += OnAutoSaveTimedEvent;
+            aTimer.AutoReset = true;
+            aTimer.Enabled = true;
+
+        }
+
+        private void OnAutoSaveTimedEvent(Object source, ElapsedEventArgs e)
+            => SaveData("KPC_autosave.txt");        
+
+        private void OnRefreshDataTimedEvent(Object source, ElapsedEventArgs e)
         {
             Wyklad.DlugoscWykladu += 1;
             CalcMomentWykladu();
@@ -102,6 +117,38 @@ namespace MVVM.ViewModels
         public void CalcMianowicieNaMin()
             => Wyklad.MianowicieNaMin = ProszePanstwaMianowicie.Mianowicie / (Wyklad.DlugoscWykladu / 60);
 
+        public void SaveData(string saveFileName)
+        {
+            List<string> lines = new List<string>
+            {
+                String.Join("     ",
+                new string[] { "Czas trwania wykładu:", MomentWykladu.ToString() }),
 
+                String.Join("     ",
+                new string[] { "Prosze Państwa:", ProszePanstwaMianowicie.ProszePanstwa.ToString() }),
+
+                String.Join("     ",
+                new string[] { "Prosze Państwa / Minuta:", Wyklad.ProszePanstwaNaMin.ToString() }),
+
+                String.Join("     ",
+                new string[] { "Mianowicie:", ProszePanstwaMianowicie.Mianowicie.ToString() }),
+
+                String.Join("     ",
+                new string[] { "Mianowicie / Minuta:", Wyklad.MianowicieNaMin.ToString() })
+            };
+
+
+            string docPath =
+              Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments );
+
+            // Write the string array to a new file named "WriteLines.txt".
+            using (StreamWriter outputFile = new StreamWriter(System.IO.Path.Combine(docPath, saveFileName)))
+            {
+                foreach (string line in lines)
+                    outputFile.WriteLine(line);
+
+                outputFile.Close();
+            }                       
+        }
     }
 }
