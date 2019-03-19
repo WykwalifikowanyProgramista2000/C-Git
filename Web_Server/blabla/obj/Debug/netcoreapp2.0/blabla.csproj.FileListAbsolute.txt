@@ -1,0 +1,11 @@
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\bin\Debug\netcoreapp2.0\blabla.deps.json
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\bin\Debug\netcoreapp2.0\blabla.runtimeconfig.json
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\bin\Debug\netcoreapp2.0\blabla.runtimeconfig.dev.json
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\bin\Debug\netcoreapp2.0\blabla.dll
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\bin\Debug\netcoreapp2.0\blabla.pdb
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.csprojAssemblyReference.cache
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.csproj.CoreCompileInputs.cache
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.AssemblyInfoInputs.cache
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.AssemblyInfo.cs
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.dll
+C:\Users\wojte\Documents\CisGit\Web_Server\blabla\obj\Debug\netcoreapp2.0\blabla.pdb
